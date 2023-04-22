@@ -1,4 +1,4 @@
-{
+{ /* https://www.typescriptlang.org/tsconfig */
   "compilerOptions": {
     /* Type Checking */
     "allowUnreachableCode": false,
@@ -8,12 +8,37 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    /* Module */
+    "baseUrl": "src",
+    "module": "esnext",
+    "moduleResolution": "nodenext",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "resolveJsonModule": true,
+    /* Emit */
+    "noEmit": true,
+    "preserveConstEnums": true,
+    /* JavaScript Support */
+    "allowJs": false,
 
+
+
+    "strictTypeChecks": true,
 
 
     /* Basic Options */
-    "allowJs": false,
-    "strict": false,
     /* Strict Type-Checking Options */
   },
   "include": [
