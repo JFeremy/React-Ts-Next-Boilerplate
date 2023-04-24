@@ -7,7 +7,7 @@ const Main = ({
   <S.Wrapper>
     <S.Logo>
       <img
-        src='/img/logo-iceberg.svg'
+        src='/images/logo-iceberg.svg'
         width='200'
         alt='Iceberg NextJS Boilerplate text and Iceberg Icon'
       />

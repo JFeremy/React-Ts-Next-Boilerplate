@@ -43,6 +43,7 @@
     // "explainFiles": true,
     // "traceResolution": true,
     /* Projects */
+    "incremental": true,
     /* Output Formatting */
     /* Completeness */
     "skipLibCheck": true
