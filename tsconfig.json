@@ -1,4 +1,5 @@
-{ /* https://www.typescriptlang.org/tsconfig */
+{
+  /* https://www.typescriptlang.org/tsconfig */
   "compilerOptions": {
     /* Type Checking */
     "allowUnreachableCode": false,
@@ -22,9 +23,7 @@
     "module": "esnext",
     "moduleResolution": "nodenext",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     },
     "resolveJsonModule": true,
     /* Emit */
@@ -32,21 +31,23 @@
     "preserveConstEnums": true,
     /* JavaScript Support */
     "allowJs": false,
-
-
-
-    "strictTypeChecks": true,
-
-
-    /* Basic Options */
-    /* Strict Type-Checking Options */
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    /* Language and Environment */
+    "jsx": "preserve",
+    "lib": ["dom", "esnext"],
+    "target": "ESNext",
+    /* Compiler Diagnostics */
+    // "explainFiles": true,
+    // "traceResolution": true,
+    /* Projects */
+    /* Output Formatting */
+    /* Completeness */
+    "skipLibCheck": true
+    /* Command Line & Watch Options*/
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

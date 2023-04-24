@@ -10,12 +10,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src",
-    "lint:fix": "npm run lint -- --fix",
+    "lint": "standard --verbose | snazzy",
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier-standard --format",
     "test": "jest",
     "test:watch": "yarn test --watch",
     "generate": "yarn plop --plopfile generators/plopfile.js",
-    "main": "git checkout main && git pull"
+    "synchro": "git checkout main && git pull"
+  },
+  "standard": {
+    "parser": "@babel/eslint-parser"
+  },
+  "ts-standard": {
+    "project": "./tsconfig.json"
   },
   "dependencies": {
     "next": "^13.x",
@@ -26,6 +33,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.x",
+    "@babel/eslint-parser": "^7.x",
     "@babel/preset-typescript": "^7.x",
     "@testing-library/jest-dom": "^5.x",
     "@testing-library/react": "^14.x",
@@ -34,23 +42,18 @@
     "@types/react": "^18.x",
     "@types/react-dom": "^18.x",
     "@types/styled-components": "^5.x",
-    "@typescript-eslint/eslint-plugin": "^5.x",
-    "@typescript-eslint/parser": "^5.x",
     "babel-loader": "^9.x",
     "babel-plugin-styled-components": "^2.x",
-    "eslint": "^8.x",
-    "eslint-config-next": "^13.x",
-    "eslint-config-prettier": "^8.x",
-    "eslint-plugin-next": "^0.0.0",
-    "eslint-plugin-prettier": "^4.x",
-    "eslint-plugin-react": "^7.x",
-    "eslint-plugin-react-hooks": "^4.x",
     "husky": "^8.x",
     "jest": "^29.x",
     "jest-styled-components": "^7.x",
     "lint-staged": "^13.x",
     "plop": "^3.x",
     "prettier": "^2.x",
+    "prettier-standard": "^16.x",
+    "snazzy": "^9.x",
+    "standard": "^17.x",
+    "ts-standard": "^12.x",
     "typescript": "^5.x"
   }
 }
