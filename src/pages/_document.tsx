@@ -9,7 +9,7 @@ import Document, {
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
-  static async getInitialProps (
+  static override async getInitialProps (
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet()
@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
     }
   }
 
-  render () {
+  override render () {
     return (
       <Html lang='en'>
         <Head />
