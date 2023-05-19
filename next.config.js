@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['tsx', 'ts'],
   experimental: {
-    forceSwcTransforms: true,
-  },
+    forceSwcTransforms: true
+  }
 }
 
-module.exports = nextConfig;
+module.exports = nextConfig

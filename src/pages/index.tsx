@@ -1,3 +1,4 @@
+import Page from '@/app/pages/home'
 import Main from '@/components/Main'
 import Head from 'next/head'
 
@@ -12,6 +13,7 @@ export default function Home () {
       </Head>
       <main>
         <Main />
+        <Page />
       </main>
     </>
   )

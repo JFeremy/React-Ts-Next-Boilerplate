@@ -12,5 +12,9 @@
   "standard.autoFixOnSave": true,
 
   // Files to validate with Standard JS
-  "standard.validate": ["javascript", "javascriptreact"]
+  "standard.validate": ["javascript", "javascriptreact"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "standard.run": "onType"
 }
