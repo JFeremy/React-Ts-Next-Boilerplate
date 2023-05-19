@@ -1,20 +1,16 @@
-import * as S from './style'
-
 const Main = ({
-  title = 'NextJS boilerplate',
-  description = 'A simple project starter to work with TypeScript, React, NextJS and Styled Components'
+  title = "NextJS boilerplate",
+  description = "A simple project starter to work with TypeScript, React, NextJS and Styled Components",
 }) => (
-  <S.Wrapper>
-    <S.Logo>
-      <img
-        src='/images/logo-iceberg.svg'
-        width='200'
-        alt='Iceberg NextJS Boilerplate text and Iceberg Icon'
-      />
-    </S.Logo>
-    <S.Title>{title}</S.Title>
-    <S.Description>{description}</S.Description>
-  </S.Wrapper>
-)
+  <div>
+    <img
+      src="/images/logo-iceberg.svg"
+      width="200"
+      alt="Iceberg NextJS Boilerplate text and Iceberg Icon"
+    />
+    <h1>{title}</h1>
+    <p>{description}</p>
+  </div>
+);
 
-export default Main
+export default Main;

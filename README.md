@@ -8,7 +8,7 @@ ESLINT
 Prettier
 Editor
 Jest
-Styled-Components
+Tailwindcss
 
 ## ESLINT Instead of Standard JavaScript
 
