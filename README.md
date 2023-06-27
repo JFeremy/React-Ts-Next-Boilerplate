@@ -3,26 +3,12 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## TO SETUP:
-
-ESLINT
-Prettier
 Editor
-Jest
-Tailwindcss
-
-## ESLINT Instead of Standard JavaScript
+Jest  // Testing react
+sass
+i8n
 
 ### Dependencies
-
-    "@typescript-eslint/eslint-plugin": "^5.x",
-    "@typescript-eslint/parser": "^5.x",
-    "eslint": "^8.x",
-    "eslint-config-next": "^13.x",
-    "eslint-config-prettier": "^8.x",
-    "eslint-plugin-next": "^0.0.0",
-    "eslint-plugin-prettier": "^4.x",
-    "eslint-plugin-react": "^7.x",
-    "eslint-plugin-react-hooks": "^4.x",
 
 ## Testing
 
