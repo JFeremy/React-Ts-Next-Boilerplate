@@ -1,12 +1,14 @@
 import { AppProps } from 'next/app'
 import React from 'react'
+import { appWithTranslation } from 'next-i18next'
+import RootLayout from '@/app/layouts/globals'
 
-function App ({ Component, pageProps }: AppProps) {
-  return (
+const App = ({ Component, pageProps }: AppProps) => (
     <>
-      <Component {...pageProps} />
+        <RootLayout>
+            <Component {...pageProps} />
+        </RootLayout>
     </>
-  )
-}
+)
 
-export default App
+export default appWithTranslation(App)

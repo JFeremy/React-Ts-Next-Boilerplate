@@ -23,7 +23,9 @@
     "module": "esnext",
     "moduleResolution": "nodenext",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     },
     "resolveJsonModule": true,
     /* Emit */
@@ -37,7 +39,10 @@
     "isolatedModules": true,
     /* Language and Environment */
     "jsx": "preserve",
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "target": "ESNext",
     /* Compiler Diagnostics */
     // "explainFiles": true,
@@ -47,8 +52,22 @@
     /* Output Formatting */
     /* Completeness */
     "skipLibCheck": true
-    /* Command Line & Watch Options*/
+    /* Command Line & Watch Options*/,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "*.js"],
-  "exclude": ["node_modules"]
+  "include": [
+    "@types",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "*.js",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

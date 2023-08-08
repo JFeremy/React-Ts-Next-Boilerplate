@@ -7,8 +7,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "404": "cp out/404/index.html out/404.html",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
+    "postbuild": "npm run 404",
     "start": "next start",
     "lint": "standard --verbose | snazzy",
     "lint:fix": "yarn lint --fix",
@@ -25,9 +27,14 @@
     "project": "./tsconfig.json"
   },
   "dependencies": {
+    "clsx": "^2.0.0",
+    "i18next": "^23.4.1",
     "next": "^13.x",
+    "next-i18next": "^14.0.0",
+    "next-language-detector": "^1.0.2",
     "react": "^18.x",
     "react-dom": "^18.x",
+    "react-i18next": "^13.0.2",
     "react-swipeable": "^7.x"
   },
   "devDependencies": {
@@ -37,7 +44,7 @@
     "@testing-library/jest-dom": "^5.x",
     "@testing-library/react": "^14.x",
     "@types/jest": "^29.x",
-    "@types/node": "^18.x",
+    "@types/node": "^20.x",
     "@types/react": "^18.x",
     "@types/react-dom": "^18.x",
     "autoprefixer": "^10.x",
@@ -49,7 +56,7 @@
     "lint-staged": "^13.x",
     "plop": "^3.x",
     "postcss": "^8.x",
-    "prettier": "^2.x",
+    "prettier": "^3.x",
     "prettier-standard": "^16.x",
     "snazzy": "^9.x",
     "standard": "^17.x",
