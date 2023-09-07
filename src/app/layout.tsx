@@ -7,7 +7,7 @@ import { i18n } from '#i18n';
 
 import { AnybodyFont, FiraCodeFont } from './_styles/font';
 
-export async function generateStaticParams (): Promise<IStaticParams[]> {
+export async function generateStaticParams(): Promise<IStaticParams[]> {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
