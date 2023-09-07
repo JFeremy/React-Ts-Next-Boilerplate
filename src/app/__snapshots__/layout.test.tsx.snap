@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RootLayout Layout component matches snapshot 1`] = `
+<html
+  className="variable variable"
+  lang="fr"
+>
+  <body>
+    <div>
+      root layout test
+    </div>
+  </body>
+</html>
+`;

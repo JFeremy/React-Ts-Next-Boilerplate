@@ -1,67 +1,103 @@
 {
-  "name": "react-ts-next-starter",
+  "name": "react-ts-next-boilerplate",
   "version": "1.0.0",
-  "description": "Starter project with React Typescript and NextJs",
+  "description": "Boilerplate project with React Typescript and NextJs",
   "repository": "https://github.com/JFeremy/React-Ts-Next-Starter",
   "author": "Jérémy <fumeron.jeremy@live.fr>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "404": "cp out/404/index.html out/404.html",
-    "dev": "next dev",
-    "build": "next build && next export",
-    "postbuild": "npm run 404",
+    "prepare": "panda codegen && husky install",
+    "dev": "next",
+    "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "standard --verbose | snazzy",
-    "lint:fix": "yarn lint --fix",
-    "format": "prettier-standard --format",
+    "clean": "rimraf .next .swc out coverage",
+    "lint": "next lint",
+    "lint:fix": "eslint src --fix && yarn format",
+    "lint:strict": "eslint --max-warnings=0 src",
+    "format": "prettier -w .",
+    "format:check": "prettier -c .",
+    "typecheck": "tsc --noEmit --incremental false",
     "test": "jest",
-    "test:watch": "yarn test --watch",
-    "generate": "yarn plop --plopfile generators/plopfile.js",
+    "test:snap-update": "yarn test -u",
+    "test:watch": "jest --watchAll",
     "synchro": "git checkout main && git pull"
   },
-  "standard": {
-    "parser": "@babel/eslint-parser"
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   },
-  "ts-standard": {
-    "project": "./tsconfig.json"
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
   },
   "dependencies": {
-    "clsx": "^2.0.0",
-    "i18next": "^23.4.1",
+    "@formatjs/intl-localematcher": "^0.x",
+    "negotiator": "^0.x",
     "next": "^13.x",
-    "next-i18next": "^14.0.0",
-    "next-language-detector": "^1.0.2",
+    "postcss": "^8.x",
     "react": "^18.x",
     "react-dom": "^18.x",
-    "react-i18next": "^13.0.2",
     "react-swipeable": "^7.x"
   },
   "devDependencies": {
-    "@babel/core": "^7.x",
-    "@babel/eslint-parser": "^7.x",
-    "@babel/preset-typescript": "^7.x",
-    "@testing-library/jest-dom": "^5.x",
+    "@commitlint/cli": "^17.x",
+    "@commitlint/config-conventional": "^17.x",
+    "@commitlint/cz-commitlint": "^17.x",
+    "@pandacss/dev": "^0.x",
+    "@semantic-release/changelog": "^6.x",
+    "@semantic-release/git": "^10.x",
+    "@testing-library/jest-dom": "^6.x",
     "@testing-library/react": "^14.x",
+    "@testing-library/user-event": "^14.x",
     "@types/jest": "^29.x",
+    "@types/negotiator": "^0.x",
     "@types/node": "^20.x",
     "@types/react": "^18.x",
     "@types/react-dom": "^18.x",
+    "@types/react-test-renderer": "^18.x",
+    "@typescript-eslint/eslint-plugin": "^6.x",
+    "@typescript-eslint/parser": "^6.x",
     "autoprefixer": "^10.x",
-    "babel-loader": "^9.x",
-    "flowbite": "^1.x",
-    "flowbite-react": "^0.x",
+    "commitizen": "^4.3.0",
+    "cross-env": "^7.x",
+    "eslint": "^8.x",
+    "eslint-config-next": "^13.x",
+    "eslint-config-prettier": "^9.x",
+    "eslint-plugin-jest-dom": "^5.x",
+    "eslint-plugin-next": "^0.x",
+    "eslint-plugin-simple-import-sort": "^10.x",
+    "eslint-plugin-testing-library": "^6.x",
+    "eslint-plugin-unused-imports": "^3.x",
+    "http-server": "^14.x",
     "husky": "^8.x",
     "jest": "^29.x",
-    "lint-staged": "^13.x",
-    "plop": "^3.x",
-    "postcss": "^8.x",
+    "jest-environment-jsdom": "^29.x",
+    "lint-staged": "^14.x",
+    "next-sitemap": "^4.x",
+    "node-fetch": "^3.3.2",
     "prettier": "^3.x",
-    "prettier-standard": "^16.x",
+    "react-test-renderer": "^18.x",
+    "rimraf": "^5.x",
+    "semantic-release": "^21.x",
     "snazzy": "^9.x",
-    "standard": "^17.x",
-    "tailwindcss": "^3.x",
-    "ts-standard": "^12.x",
+    "ts-jest": "^29.x",
     "typescript": "^5.x"
   }
 }

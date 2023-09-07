@@ -1,8 +1,0 @@
-{
-  "back-to-home": "Retour sur l'accueil",
-  "error-with-status": "Une erreur {{statusCode}} est survenu sur le server",
-  "error-without-status": "Une erreur est survenu sur le server",
-  "h1": "Un exemple simple",
-  "title": "Accueil",
-  "to-second-page": "Seconde page"
-}

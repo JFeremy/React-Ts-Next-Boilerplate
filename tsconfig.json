@@ -1,7 +1,5 @@
 {
-  /* https://www.typescriptlang.org/tsconfig */
   "compilerOptions": {
-    /* Type Checking */
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "alwaysStrict": true,
@@ -18,41 +16,27 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    /* Module */
     "baseUrl": "src",
-    "module": "esnext",
-    "moduleResolution": "nodenext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"],
+      "#pcss/*": ["../styled-system/*"],
+      "#i18n": ["../i18n-config"],
+      "~/*": ["../public/*"]
     },
     "resolveJsonModule": true,
-    /* Emit */
     "noEmit": true,
     "preserveConstEnums": true,
-    /* JavaScript Support */
-    "allowJs": false,
-    /* Interop Constraints */
+    "allowJs": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    /* Language and Environment */
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "target": "ESNext",
-    /* Compiler Diagnostics */
-    // "explainFiles": true,
-    // "traceResolution": true,
-    /* Projects */
     "incremental": true,
-    /* Output Formatting */
-    /* Completeness */
-    "skipLibCheck": true
-    /* Command Line & Watch Options*/,
+    "skipLibCheck": true,
     "plugins": [
       {
         "name": "next"
@@ -60,14 +44,14 @@
     ]
   },
   "include": [
-    "@types",
+    "styled-system",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "*.js",
-    ".next/types/**/*.ts"
+    "*.mjs",
+    ".next/types/**/*.ts",
+    "./jest-setup.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

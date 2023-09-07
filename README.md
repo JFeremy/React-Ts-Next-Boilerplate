@@ -2,32 +2,15 @@
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## TO SETUP:
-Editor
-Jest  // Testing react
-sass
-
-### Dependencies
-
-## Testing
-
-- [Découvrez la base des tests dans React avec Jest](https://openclassrooms.com/fr/courses/7150606-creez-une-application-react-complete/7256627-decouvrez-la-base-des-tests-dans-react-avec-jest)
-
-## VSCode PLUGINS
-
-- [JavaScript standardjs styled snippets](https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets)
-- [React Standard Style code snippets](https://marketplace.visualstudio.com/items?itemName=TimonVS.ReactSnippetsStandard)
-
-
+https://www.typescriptlang.org/tsconfig
 ## ICONS
 https://www.s-ings.com/typicons/
 
-## Flycode to manage website data
-https://blog.flycode.com/step-by-step-how-to-internationalize-your-nextjs-app-with-next-translate#heading-why-do-we-choose-next-translate
 
+## SITE MAP 
+https://github.com/iamvishnusankar/next-sitemap#readme
 
-TODO sitemap nextjs
+## TESTS
+https://dev.to/peterlidee/-mocking-usesearchparams-and-userouter-with-jest-in-next-13-nextnavigation-15bd
 
-links
-https://haodev007.medium.com/using-tailwind-css-next-js-typescript-like-a-pro-integration-40ad8fed0c75
-https://www.showwcase.com/show/15201/create-a-web-project-using-nextjs-typescript-tailwind-css
+https://dev.to/peterlidee/how-to-mock-next-router-with-jest-3p6b

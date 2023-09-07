@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CounterTemp component matches snapshot 1`] = `
+<div>
+  <div
+    class="d_flex items_center justify_center gap_5 flex_row"
+  >
+    <button
+      class="text_red text_center bg_gray.800 rounded_2 fs_1rem px_10px py_5px"
+    >
+      Ipsum
+    </button>
+    <p>
+      0
+    </p>
+    <button
+      class="text_red text_center bg_gray.800 rounded_2 fs_1rem px_10px py_5px"
+    >
+      Lorem
+    </button>
+  </div>
+</div>
+`;

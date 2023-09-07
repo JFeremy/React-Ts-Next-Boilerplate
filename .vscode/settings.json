@@ -1,20 +1,13 @@
 {
-  // Prevents VS Code from formatting JavaScript with the default linter
-  "javascript.format.enable": false,
-
-  // Prevents VS Code linting JavaScript with the default linter
-  "javascript.validate.enable": false,
-
-  // Lints with Standard JS
-  "standard.enable": true,
-
-  // Format files with Standard whenever you save the file
-  "standard.autoFixOnSave": true,
-
-  // Files to validate with Standard JS
-  "standard.validate": ["javascript", "javascriptreact"],
+  "javascript.preferences.quoteStyle": "single",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "typescript.preferences.quoteStyle": "single",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "standard.run": "onType"
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "editor.tabSize": 2
 }

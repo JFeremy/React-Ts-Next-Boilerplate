@@ -4,11 +4,16 @@
 /node_modules
 /.pnp
 .pnp.js
+/styled-system/
 
 # testing
 /coverage
 
+# pandacss
+/styled-system/
+
 # next.js
+/.swc/
 /.next/
 /out/
 
@@ -17,6 +22,7 @@
 
 # misc
 .DS_Store
+*.pem
 
 # debug
 npm-debug.log*
@@ -24,11 +30,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env*.local
 
-# sw stuff
-public/sw.js
-public/workbox-*.js
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

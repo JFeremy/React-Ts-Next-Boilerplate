@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocaleSwitcher component matches snapshot 1`] = `
+<div>
+  <div
+    class="font_anybody"
+  >
+    <p>
+      Lorem ipsum dolor sit amet.
+    </p>
+    <ul>
+      <li>
+        <a
+          href="/en"
+        >
+          en
+        </a>
+      </li>
+      <li>
+        <a
+          href="/fr"
+        >
+          fr
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

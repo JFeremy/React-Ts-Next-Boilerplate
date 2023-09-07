@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelloTemp component matches snapshot 1`] = `
+<div>
+  <div
+    class="d_flex items_center justify_center bg_red.200"
+  >
+    <div
+      class="fs_2xl font_bold font_fira"
+    >
+      Lorem, ipsum dolor.
+    </div>
+  </div>
+</div>
+`;

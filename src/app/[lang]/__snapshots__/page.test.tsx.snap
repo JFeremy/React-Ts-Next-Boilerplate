@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page component matches snapshot 1`] = `
+<div>
+  <div
+    class="pos_relative max-w_8xl mx_auto px_4 md:px_6 lg:px_8 p_6"
+  >
+    <div
+      class="d_flex items_center justify_center gap_5 flex_column"
+    >
+      <div
+        class="font_anybody"
+      >
+        <p>
+          Lorem ipsum dolor
+        </p>
+        <ul>
+          <li>
+            <a
+              href="/en"
+            >
+              en
+            </a>
+          </li>
+          <li>
+            <a
+              href="/fr"
+            >
+              fr
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p>
+        sit amet consectetur adipisicing elit.
+      </p>
+      <p>
+        Docs
+      </p>
+      <h2>
+        fr
+      </h2>
+      <div
+        class="d_flex items_center justify_center bg_red.200"
+      >
+        <div
+          class="fs_2xl font_bold font_fira"
+        >
+          Lorem, ipsum dolor.
+        </div>
+      </div>
+      <p>
+        Necessitatibus facere odio
+      </p>
+      <div
+        class="d_flex items_center justify_center gap_5 flex_row"
+      >
+        <button
+          class="text_red text_center bg_gray.800 rounded_2 fs_1rem px_10px py_5px"
+        >
+          sed
+        </button>
+        <p>
+          0
+        </p>
+        <button
+          class="text_red text_center bg_gray.800 rounded_2 fs_1rem px_10px py_5px"
+        >
+          quibusdam
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
