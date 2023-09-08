@@ -58,10 +58,6 @@ describe('getPageTranslation', () => {
     });
   });
 
-  afterAll(() => {
-    delete langPages['testPage' as unknown as TPage];
-  });
-
   it('should return page translation for a given locale', () => {
     const translations = getPageTranslation(
       'fr',
