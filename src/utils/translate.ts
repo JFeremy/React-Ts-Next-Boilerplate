@@ -1,8 +1,7 @@
 import { TComponent, TLocale, TPage } from '@/interfaces';
-import { langMetaDataPages } from '~/locales/metadata';
+import { langComponents } from '~/locales/components';
+import { langMetaDataPages } from '~/locales/metadatas';
 import { langPages } from '~/locales/pages';
-
-import { langComponents } from '../../public/locales/components';
 
 export const getMetadataPageTranslation = (
   locale: TLocale,

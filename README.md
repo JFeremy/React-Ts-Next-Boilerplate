@@ -15,14 +15,15 @@
 
 # 📔 Table of Contents
 
-- [🎯 FEATURES](#🎯-features)
-- [💻 STACK](#💻-stack)
-- [🧰 GETTING STARTED](#🧰-getting-started)
-  - [‼️ Prerequisites](#‼️-prerequisites)
-  - [🧪 Running Tests](#🧪-running-tests)
-  - [🏃 Run Locally](#🏃-run-locally)
-- [🧭 ROADMAP](#🧭-roadmap)
-- [🔗 REFERENCES & LINKS](#🔗-references--links)
+- [🎯 FEATURES](#-features)
+- [💻 STACK](#-stack)
+- [🧰 GETTING STARTED](#-getting-started)
+  - [‼️ Prerequisites](#-prerequisites)
+  - [🧪 Running Tests](#-running-tests)
+  - [🏃 Run Locally](#-run-locally)
+- [🚢 DEPLOY TO NETLIFY](#🚢-deploy-to-netlify)
+- [🧭 ROADMAP](#-roadmap)
+- [🔗 REFERENCES & LINKS](#-references--links)
 
 ## 🎯 FEATURES
 
@@ -106,6 +107,12 @@ Start the server
 ```bash
 yarn start
 ```
+
+## 🚢 DEPLOY TO NETLIFY
+
+Clone this repository on own GitHub account and deploy to Netlify:
+
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/JFeremy/React-Ts-Next-Boilerplate)
 
 ## 🧭 ROADMAP
 

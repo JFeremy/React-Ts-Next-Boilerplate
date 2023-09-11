@@ -3,7 +3,7 @@ import './_styles/globals.css';
 import { PropsWithChildren } from 'react';
 
 import { IPageParams, IStaticParams } from '@/interfaces';
-import { i18n } from '#i18n';
+import { i18n } from '~/locales/i18n-config';
 
 import { AnybodyFont, FiraCodeFont } from './_styles/font';
 
