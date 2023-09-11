@@ -63,14 +63,14 @@ module.exports = (plop) => {
       if (data.hasTranslation) {
         actions.push({
           type: 'add',
-          path: 'public/locales/components/{{camelCase name}}.component.ts',
+          path: 'public/locales/components/{{dashCase name}}.component.ts',
           templateFile: 'plop-templates/Component/translation.ts.hbs',
         });
         actions.push({
           type: 'append',
           path: 'public/locales/components/index.ts',
           pattern: `/* PLOP-INJECT_IMPORT_LANG_COMPONENT */`,
-          template: `{{#if hasTranslation}}import { {{camelCase name}} } from './{{camelCase name}}.component';{{/if}}`,
+          template: `{{#if hasTranslation}}import { {{camelCase name}} } from './{{dashCase name}}.component';{{/if}}`,
         });
         actions.push({
           type: 'append',
@@ -84,127 +84,88 @@ module.exports = (plop) => {
     },
   });
 
-  plop.setGenerator('page', {
+  plop.setGenerator('🎨  UI', {
+    description: 'Create a reusable UI element',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'UI element name ? ',
+        validate: requireField('name'),
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        path: 'src/ui/{{dashCase name}}/index.tsx',
+        templateFile: 'plop-templates/UI/ui.tsx.hbs',
+      },
+      {
+        type: 'add',
+        path: 'src/ui/{{dashCase name}}/design.tsx',
+        templateFile: 'plop-templates/UI/design.tsx.hbs',
+      },
+    ],
+  });
+
+  plop.setGenerator('📃  Page', {
     description: 'Create a page',
     prompts: [
       {
         type: 'input',
         name: 'name',
-        message: 'What is your page name?',
+        message: 'Page name ?',
         validate: requireField('name'),
       },
-    ],
-    actions: [
-      {
-        type: 'add',
-        path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.js',
-        templateFile: 'plop-templates/Page/Page.js.hbs',
-      },
-      {
-        type: 'add',
-        path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.test.js',
-        templateFile: 'plop-templates/Page/Page.test.js.hbs',
-      },
-      {
-        type: 'add',
-        path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.module.css',
-        templateFile: 'plop-templates/Page/Page.module.css.hbs',
-      },
-      {
-        type: 'add',
-        path: 'src/pages/{{pascalCase name}}/index.js',
-        templateFile: 'plop-templates/Page/index.js.hbs',
-      },
-      {
-        type: 'add',
-        path: 'src/pages/index.js',
-        templateFile: 'plop-templates/injectable-index.js.hbs',
-        skipIfExists: true,
-      },
-      {
-        type: 'append',
-        path: 'src/pages/index.js',
-        pattern: `/* PLOP_INJECT_IMPORT */`,
-        template: `import {{pascalCase name}} from './{{pascalCase name}}';`,
-      },
-      {
-        type: 'append',
-        path: 'src/pages/index.js',
-        pattern: `/* PLOP_INJECT_EXPORT */`,
-        template: `\t{{pascalCase name}},`,
-      },
-    ],
-  });
-
-  plop.setGenerator('service', {
-    description: 'Create service',
-    prompts: [
       {
         type: 'input',
-        name: 'name',
-        message: 'What is your service name?',
-        validate: requireField('name'),
+        name: 'path',
+        message: 'Page path after [lang] ?',
       },
     ],
     actions: [
       {
         type: 'add',
-        path: 'src/services/{{camelCase name}}.js',
-        templateFile: 'plop-templates/service.js.hbs',
+        path: 'src/app/[lang]/{{path}}{{dashCase name}}/page.tsx',
+        templateFile: 'plop-templates/Page/page.tsx.hbs',
       },
       {
         type: 'add',
-        path: 'src/services/index.js',
-        templateFile: 'plop-templates/injectable-index.js.hbs',
-        skipIfExists: true,
+        path: 'src/app/[lang]/{{path}}{{dashCase name}}/__tests__/page.test.tsx',
+        templateFile: 'plop-templates/Page/page.test.tsx.hbs',
+      },
+      {
+        type: 'add',
+        path: 'public/locales/pages/{{dashCase name}}.page.ts',
+        templateFile: 'plop-templates/Page/translation-page.ts.hbs',
       },
       {
         type: 'append',
-        path: 'src/services/index.js',
-        pattern: `/* PLOP_INJECT_IMPORT */`,
-        template: `import {{camelCase name}} from './{{camelCase name}}';`,
+        path: 'public/locales/pages/index.ts',
+        pattern: `/* PLOP-INJECT_IMPORT_LANG_PAGE */`,
+        template: `import { {{camelCase name}} } from './{{dashCase name}}.page';`,
       },
       {
         type: 'append',
-        path: 'src/services/index.js',
-        pattern: `/* PLOP_INJECT_EXPORT */`,
+        path: 'public/locales/pages/index.ts',
+        pattern: `/* PLOP-INJECT_EXPORT_LANG_PAGE */`,
         template: `\t{{camelCase name}},`,
       },
-    ],
-  });
-
-  plop.setGenerator('hook', {
-    description: 'Create a custom react hook',
-    prompts: [
-      {
-        type: 'input',
-        name: 'name',
-        message: 'What is your hook name?',
-        validate: requireField('name'),
-      },
-    ],
-    actions: [
       {
         type: 'add',
-        path: 'src/hooks/{{camelCase name}}.js',
-        templateFile: 'plop-templates/hook.js.hbs',
-      },
-      {
-        type: 'add',
-        path: 'src/hooks/index.js',
-        templateFile: 'plop-templates/injectable-index.js.hbs',
-        skipIfExists: true,
+        path: 'public/locales/metadatas/{{dashCase name}}.metadata.ts',
+        templateFile: 'plop-templates/Page/translation-metadata.ts.hbs',
       },
       {
         type: 'append',
-        path: 'src/hooks/index.js',
-        pattern: `/* PLOP_INJECT_IMPORT */`,
-        template: `import {{camelCase name}} from './{{camelCase name}}';`,
+        path: 'public/locales/metadatas/index.ts',
+        pattern: `/* PLOP-INJECT_IMPORT_LANG_METADATA */`,
+        template: `import { {{camelCase name}} } from './{{dashCase name}}.metadata';`,
       },
       {
         type: 'append',
-        path: 'src/hooks/index.js',
-        pattern: `/* PLOP_INJECT_EXPORT */`,
+        path: 'public/locales/metadatas/index.ts',
+        pattern: `/* PLOP-INJECT_EXPORT_LANG_METADATA */`,
         template: `\t{{camelCase name}},`,
       },
     ],

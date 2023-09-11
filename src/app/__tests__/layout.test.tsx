@@ -2,7 +2,7 @@ import renderer from 'react-test-renderer';
 
 import { TLocale } from '@/interfaces';
 
-import RootLayout, { generateStaticParams } from './layout';
+import RootLayout, { generateStaticParams } from '../layout';
 
 describe('RootLayout', () => {
   describe('Layout', () => {

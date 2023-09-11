@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import NotFound from './not-found';
+import NotFound from '../not-found';
 
 describe('NotFound', () => {
   it('shoud have expected text', async () => {

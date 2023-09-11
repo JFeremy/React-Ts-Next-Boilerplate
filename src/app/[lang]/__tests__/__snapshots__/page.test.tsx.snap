@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home Page component matches snapshot 1`] = `
+exports[`Home Page page matches snapshot 1`] = `
 <div>
   <div
     class="pos_relative max-w_8xl mx_auto px_4 md:px_6 lg:px_8 p_6"

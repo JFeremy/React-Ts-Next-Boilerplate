@@ -6,7 +6,7 @@ import {
   getPageTranslation,
 } from '@/utils/translate';
 
-import Home, { generateMetadata, generateStaticParams } from './page';
+import {{pascalCase name}}, { generateMetadata, generateStaticParams } from '../page';
 
 jest.mock('@/utils/translate', () => ({
   getPageTranslation: jest.fn(),
@@ -14,36 +14,18 @@ jest.mock('@/utils/translate', () => ({
   getMetadataPageTranslation: jest.fn(),
 }));
 
-describe('Home', () => {
-  describe('Page', () => {
+
+
+describe('{{pascalCase name}}', () => {
+  describe('Page', () => {    
     it('component matches snapshot', async () => {
-      const mockPTranslationData = {
-        server: 'Necessitatibus facere odio',
-      };
-      const mockCTranslationData = {
-        hello: {
-          title: 'Lorem, ipsum dolor.',
-        },
-        header: {
-          title: 'sit amet consectetur adipisicing elit.',
-          localeSwitcher: 'Lorem ipsum dolor',
-        },
-        counter: {
-          more: 'quibusdam',
-          less: 'sed',
-        },
-      };
-
-      (getPageTranslation as jest.Mock).mockReturnValue(mockPTranslationData);
-      (getComponentsTranslation as jest.Mock).mockReturnValue(
-        mockCTranslationData,
+      const view = render(
+        <{{pascalCase name}} params={ { lang: 'fr' } }/>,
       );
-
-      const view = render(<Home params={{ lang: 'fr' }} />);
-
       expect(view.container).toMatchSnapshot();
     });
   });
+  
 
   describe('generateStaticParams', () => {
     it('should generate static params for all available locales', async () => {
@@ -54,6 +36,7 @@ describe('Home', () => {
       );
     });
   });
+  
 
   describe('generateMetadata', () => {
     it('should generate metadata for locale', async () => {
@@ -71,7 +54,7 @@ describe('Home', () => {
       expect(metadata).toEqual(mockMTranslationData);
       expect(getMetadataPageTranslation as jest.Mock).toHaveBeenCalledWith(
         'en',
-        'home',
+        '{{camelCase name}}',
       );
     });
   });
