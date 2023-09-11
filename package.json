@@ -52,7 +52,7 @@
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.x",
     "negotiator": "^0.x",
-    "next": "13.4",
+    "next": "^13.4.20-canary.23",
     "postcss": "^8.x",
     "react": "^18.x",
     "react-dom": "^18.x",

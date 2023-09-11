@@ -9,8 +9,8 @@ import {
   getMetadataPageTranslation,
   getPageTranslation,
 } from '@/utils/translate';
-import { i18n } from '#i18n';
 import { Container, VStack } from '#pcss/jsx';
+import { i18n } from '~/locales/i18n-config';
 
 interface HomeProps extends IPageParams {}
 

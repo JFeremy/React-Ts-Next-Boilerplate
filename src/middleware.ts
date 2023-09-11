@@ -3,7 +3,7 @@ import Negotiator from 'negotiator';
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
-import { i18n } from '#i18n';
+import { i18n } from '~/locales/i18n-config';
 
 import { TLocale } from './interfaces';
 

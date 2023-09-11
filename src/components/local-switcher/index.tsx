@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { i18n } from '#i18n';
 import { css } from '#pcss/css';
+import { i18n } from '~/locales/i18n-config';
 
 interface LocaleSwitcherProps {
   readonly title: string;

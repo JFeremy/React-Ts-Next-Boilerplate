@@ -22,7 +22,6 @@
     "paths": {
       "@/*": ["./*"],
       "#pcss/*": ["../styled-system/*"],
-      "#i18n": ["../i18n-config"],
       "~/*": ["../public/*"]
     },
     "resolveJsonModule": true,
