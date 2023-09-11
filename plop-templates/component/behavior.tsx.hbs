@@ -1,0 +1,25 @@
+'use client';
+
+import { useState } from 'react';
+
+interface {{pascalCase name}}BehaviorProps {
+  readonly initialCount: number;
+}
+
+const use{{pascalCase name}}Behavior = ({
+  initialCount,
+}: {{pascalCase name}}BehaviorProps) => {
+  const [count, setCount] = useState(initialCount);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
+  return { count, increment, decrement };
+};
+
+export default use{{pascalCase name}}Behavior;

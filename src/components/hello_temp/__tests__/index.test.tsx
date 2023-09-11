@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import { getComponentsTranslation } from '@/utils/translate';
 
-import HelloTemp from '.';
+import HelloTemp from '..';
 
 jest.mock('@/utils/translate', () => ({
   getComponentsTranslation: jest.fn(),

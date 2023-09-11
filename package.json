@@ -7,14 +7,14 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "clean": "rimraf .next .swc out coverage",
+    "clean:all": "yarn clean && rimraf node_modules yarn.lock",
     "setup": "yarn install --immutable --immutable-cache  --frozen-lockfile",
     "prepare": "panda codegen && husky install",
     "dev": "next",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "clean": "rimraf .next .swc out coverage",
-    "clean:all": "yarn clean && rimraf node_modules yarn.lock",
     "lint": "next lint",
     "lint:fix": "eslint src --fix && yarn format",
     "lint:strict": "eslint --max-warnings=0 src",
@@ -24,7 +24,8 @@
     "test": "jest",
     "test:snap-update": "yarn test -u",
     "test:watch": "jest --watchAll",
-    "synchro": "git checkout main && git pull"
+    "synchro": "git checkout main && git pull",
+    "generate": "plop"
   },
   "config": {
     "commitizen": {
@@ -97,6 +98,7 @@
     "lint-staged": "^14.x",
     "next-sitemap": "^4.x",
     "node-fetch": "^3.3.2",
+    "plop": "^4.x",
     "prettier": "^3.x",
     "react-test-renderer": "^18.x",
     "rimraf": "^5.x",
