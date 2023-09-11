@@ -12,7 +12,7 @@ jobs:
   release:
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
 
     name: Create a new release
     runs-on: ubuntu-latest
@@ -29,8 +29,9 @@ jobs:
       - name: Run install YARN
         uses: borales/actions-yarn@v4
         with:
-          cmd: install # will run `yarn install` command
-      - run: HUSKY=0 yarn install --immutable --immutable-cache
+          cmd: setup
+        env:
+          HUSKY: 0
 
       - name: Release
         env:

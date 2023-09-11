@@ -10,7 +10,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node-version: [16.x, 18.x, 20.x]
+        node-version: [18.x]
 
     name: Build with ${{ matrix.node-version }}
     runs-on: ubuntu-latest
@@ -25,14 +25,13 @@ jobs:
       - name: Run install YARN
         uses: borales/actions-yarn@v4
         with:
-          cmd: install # will run `yarn install` command
-      - run: yarn install --immutable --immutable-cache
+          cmd: setup
       - run: yarn build
 
   test:
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
 
     name: Run all tests
     runs-on: ubuntu-latest
@@ -49,8 +48,7 @@ jobs:
       - name: Run install YARN
         uses: borales/actions-yarn@v4
         with:
-          cmd: install # will run `yarn install` command
-      - run: yarn install --immutable --immutable-cache
+          cmd: setup
       - run: yarn build
 
       - if: github.event_name == 'pull_request'

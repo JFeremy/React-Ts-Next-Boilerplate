@@ -2,7 +2,7 @@ import { TComponent, TPage } from '@/interfaces';
 import { langComponents } from '~/locales/components';
 import { langPages } from '~/locales/pages';
 
-import { langMetaDataPages } from '../../public/locales/metadata';
+import { langMetaDataPages } from '../../public/locales/metadatas';
 import {
   getComponentsTranslation,
   getMetadataPageTranslation,
