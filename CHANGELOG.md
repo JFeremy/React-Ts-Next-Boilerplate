@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/JFeremy/React-Ts-Next-Boilerplate/compare/v1.2.0...v1.2.1) (2023-09-12)
+
+
+### Bug Fixes
+
+* **readme:** table of content links ([#6](https://github.com/JFeremy/React-Ts-Next-Boilerplate/issues/6)) ([fa0a182](https://github.com/JFeremy/React-Ts-Next-Boilerplate/commit/fa0a1829844d8df547e1026436fdeb88fba4cd75))
+
 # [1.2.0](https://github.com/JFeremy/React-Ts-Next-Boilerplate/compare/v1.1.0...v1.2.0) (2023-09-12)
 
 
