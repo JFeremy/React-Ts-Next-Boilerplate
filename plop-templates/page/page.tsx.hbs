@@ -1,0 +1,43 @@
+import { Metadata } from 'next';
+import { IPageParams, IStaticParams } from '@/interfaces';
+
+import {
+  getComponentsTranslation,
+  getMetadataPageTranslation,
+  getPageTranslation,
+} from '@/utils/translate';
+
+import { i18n } from '~/locales/i18n-config';
+
+interface {{pascalCase name}}Props extends IPageParams {}
+
+export async function generateStaticParams(): Promise<IStaticParams[]> {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {{pascalCase name}}Props): Promise<Metadata> {
+  const metadata = getMetadataPageTranslation(params.lang, '{{camelCase name}}');
+  return {
+    title: metadata['title'],
+    description: metadata['description'],
+  };
+}
+
+const {{pascalCase name}} = ({ params }: {{pascalCase name}}Props): React.JSX.Element => {
+  const t{{pascalCase name}} = getPageTranslation(params.lang, '{{camelCase name}}');
+  const { header: tHeader } = getComponentsTranslation(
+    params.lang,
+    ['header'],
+  );
+  
+  return (
+    <div>
+      <h1>{t{{pascalCase name}}['label']}</h1>
+      <p>{tHeader['title']}</p>
+    </div>
+  );
+};
+
+export default {{pascalCase name}};

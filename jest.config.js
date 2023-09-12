@@ -15,12 +15,13 @@ const config = {
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/src/',
   }),
-  modulePathIgnorePatterns: [
+  collectCoverage: true,
+  coveragePathIgnorePatterns: [
     'src/app/_styles/',
     'src/interfaces/',
+    'src/ui/',
     'src/middleware.ts',
   ],
-  collectCoverage: true,
   collectCoverageFrom: ['src/**/*.ts', 'src/**/*.tsx'],
   coverageThreshold: {
     global: {

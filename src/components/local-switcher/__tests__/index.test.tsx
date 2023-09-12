@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import LocaleSwitcher from '.';
+import LocaleSwitcher from '..';
 
 describe('LocaleSwitcher', () => {
   const expectedText = 'Lorem ipsum dolor sit amet.';

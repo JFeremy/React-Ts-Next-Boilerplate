@@ -1,0 +1,49 @@
+{{#if isClient}}
+'use client';
+
+{{/if}}
+import React from 'react';
+
+{{#if hasBehavior}}
+import use{{pascalCase name}}Behavior from './behavior';
+{{/if}}
+
+{{#if hasTranslation}}
+import { TLocale } from '@/interfaces';
+import { getComponentsTranslation } from '@/utils/translate';
+
+interface {{pascalCase name}}Props {
+  readonly lang: TLocale;
+}
+const {{pascalCase name}} = ({ lang }: {{pascalCase name}}Props): React.JSX.Element => {
+  const { {{camelCase name}}: t{{pascalCase name}} } = getComponentsTranslation(lang, ['{{camelCase name}}']);
+  {{#if hasBehavior}}
+    const { tochange } = use{{pascalCase name}}Behavior;
+  {{/if}}
+
+  return (
+    <div>
+      {t{{pascalCase name}}['label']}
+    </div>
+  );
+};
+{{else}}
+  {{#if hasBehavior}}    
+const {{pascalCase name}} = (): React.JSX.Element => {      
+  const { tochange } = use{{pascalCase name}}Behavior;
+  return (
+    <div>
+      {{pascalCase name}}
+    </div>
+  );
+};
+  {{else}}
+const {{pascalCase name}} = (): React.JSX.Element => (
+  <div>
+    {{pascalCase name}}
+  </div>
+);
+  {{/if}}
+{{/if}}
+
+export default {{pascalCase name}};

@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 
-import CounterTemp from '.';
+import CounterTemp from '..';
 
 describe('CounterTemp', () => {
   const expectedTexts = {

@@ -1,0 +1,16 @@
+import { render } from '@testing-library/react';
+
+import {{pascalCase name}} from '..';
+
+describe('{{pascalCase name}}', () => {
+   it('renders without error', () => {
+
+   });
+
+  it('component matches snapshot', async () => {
+    const view = render(
+      <{{pascalCase name}} />,
+    );
+    expect(view.container).toMatchSnapshot();
+  });
+});

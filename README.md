@@ -21,6 +21,10 @@
   - [‼️ Prerequisites](#-prerequisites)
   - [🧪 Running Tests](#-running-tests)
   - [🏃 Run Locally](#-run-locally)
+  - [⚙️ Generate elements](#-generate-elements)
+    - [📃 Page](#📃-page)
+    - [✏️ Component](#✏️-component)
+    - [🎨 UI](#🎨-ui)
 - [🚢 DEPLOY TO NETLIFY](#🚢-deploy-to-netlify)
 - [🧭 ROADMAP](#-roadmap)
 - [🔗 REFERENCES & LINKS](#-references--links)
@@ -106,6 +110,94 @@ Start the server
 
 ```bash
 yarn start
+```
+
+### ⚙️ Generate elements
+
+#### 📃 Page
+
+This script will generate all content for a new page
+
+```bash
+yarn generate // choose 📃 Page
+> Page name ? // Enter the name of the page (it will be the URL path)
+> Page path after [lang] ? // for example for an subpage cv under about-me, enter about-me/ 
+```
+
+Example
+```bash
+λ yarn generate
+yarn run v1.22.19
+$ plop
+? [PLOP] Please choose a generator. 📃  Page - Create a page
+? Page name ? cv
+? Page path after [lang] ? about-me/
+✔  ++ \src\app\[lang]\about-me\cv\page.tsx
+✔  ++ \src\app\[lang]\about-me\cv\__tests__\page.test.tsx
+✔  ++ \public\locales\pages\cv.page.ts
+✔  _+ \public\locales\pages\index.ts
+✔  _+ \public\locales\pages\index.ts
+✔  ++ \public\locales\metadatas\cv.metadata.ts
+✔  _+ \public\locales\metadatas\index.ts
+✔  _+ \public\locales\metadatas\index.ts
+Done in 13.43s.
+```
+
+---
+
+#### ✏️  Component
+
+This script will generate all content for a new component
+
+```bash
+yarn generate // choose ✏️ Component
+> Component name ? // Enter the name of the component
+> Component required a dedicated translation ?  // Your component will have his own translation and not import by another component or page
+> Component required a dedicated behavior ? // Your component need a dedicated behavior like a hook to split it between render and features
+> Is a client Component ? // Your component will be generated in the client interface
+```
+
+Example
+```bash
+λ yarn generate
+yarn run v1.22.19
+$ plop
+? [PLOP] Please choose a generator. ✏️  Component - Create a reusable component
+? Component name ?  Footer
+? Component required a dedicated translation ?  Yes
+? Component required a dedicated behavior ?  Yes
+? Is a client Component ?  Yes
+✔  ++ \src\components\footer\index.tsx
+✔  ++ \src\components\footer\__tests__\index.test.tsx
+✔  ++ \src\components\footer\behavior.tsx
+✔  ++ \src\components\footer\__tests__\behavior.test.tsx
+✔  ++ \public\locales\components\footer.component.ts
+✔  _+ \public\locales\components\index.ts
+✔  _+ \public\locales\components\index.ts
+Done in 15.58s.
+```
+
+---
+
+#### 🎨 UI
+
+This script will generate all content for a new UI element like button design or link ...
+
+```bash
+yarn generate // choose 🎨 UI
+> UI element name ? // Enter the name of the ui element
+```
+
+Example
+```bash
+λ yarn generate
+yarn run v1.22.19
+$ plop
+? [PLOP] Please choose a generator. 🎨  UI - Create a reusable UI element
+? UI element name ?  link
+✔  ++ \src\ui\link\index.tsx
+✔  ++ \src\ui\link\design.tsx
+Done in 7.54s.
 ```
 
 ## 🚢 DEPLOY TO NETLIFY
