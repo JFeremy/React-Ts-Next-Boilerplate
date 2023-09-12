@@ -10129,7 +10129,7 @@ pkg-types@1.0.3, pkg-types@^1.0.3:
     mlly "^1.2.0"
     pathe "^1.1.0"
 
-plop@^4.0.0:
+plop@^4.x:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/plop/-/plop-4.0.0.tgz#4c03c1c69c923441a4c285611f5c1306919379c7"
   integrity sha512-6hsuNofd5crnl7upQSRyw+7zVBZqxF9UZoWqsKqtPthpvtgUuYD+atBx7ZD9RT8qXWnylyCt9bpvYLZPexxDMg==
