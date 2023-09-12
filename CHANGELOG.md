@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/JFeremy/React-Ts-Next-Boilerplate/compare/v1.1.0...v1.2.0) (2023-09-12)
+
+
+### Features
+
+* plop and generators set up ([#5](https://github.com/JFeremy/React-Ts-Next-Boilerplate/issues/5)) ([8ab9af1](https://github.com/JFeremy/React-Ts-Next-Boilerplate/commit/8ab9af100b9ff05a2bd6a81dd6e206dfd1bcde07))
+
 # [1.1.0](https://github.com/JFeremy/React-Ts-Next-Boilerplate/compare/v1.0.0...v1.1.0) (2023-09-11)
 
 
