@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/JFeremy/React-Ts-Next-Boilerplate/compare/v1.2.1...v1.2.2) (2023-09-23)
+
+
+### Bug Fixes
+
+* pandacss includes ([#7](https://github.com/JFeremy/React-Ts-Next-Boilerplate/issues/7)) ([f10c379](https://github.com/JFeremy/React-Ts-Next-Boilerplate/commit/f10c379f61e4d31e4d9488a5d88150db5341c76f))
+
 ## [1.2.1](https://github.com/JFeremy/React-Ts-Next-Boilerplate/compare/v1.2.0...v1.2.1) (2023-09-12)
 
 
