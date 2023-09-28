@@ -121,10 +121,11 @@ This script will generate all content for a new page
 ```bash
 yarn generate // choose 📃 Page
 > Page name ? // Enter the name of the page (it will be the URL path)
-> Page path after [lang] ? // for example for an subpage cv under about-me, enter about-me/ 
+> Page path after [lang] ? // for example for an subpage cv under about-me, enter about-me/
 ```
 
 Example
+
 ```bash
 λ yarn generate
 yarn run v1.22.19
@@ -145,7 +146,7 @@ Done in 13.43s.
 
 ---
 
-#### ✏️  Component
+#### ✏️ Component
 
 This script will generate all content for a new component
 
@@ -158,6 +159,7 @@ yarn generate // choose ✏️ Component
 ```
 
 Example
+
 ```bash
 λ yarn generate
 yarn run v1.22.19
@@ -189,6 +191,7 @@ yarn generate // choose 🎨 UI
 ```
 
 Example
+
 ```bash
 λ yarn generate
 yarn run v1.22.19
